@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major System | Parking Lot Management System</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        
+        
+        <style type="text/css">
+          *{
+        font-family: 'Roboto', sans-serif;
+        padding:0;
+        margin:0;
+        border:0
+    }
+    header{
+        background-color: #9424a3;
+    }
+    #header-logo{
+        width:64px;
+        height:64px;
+    }
+    #header-msg{
+        font-size: 25px;
+        color: white;
+    }
+    #btnOne{
+        
+        color:black;
+    }
+    #btnOne:focus,#btnOne:hover{
+        box-shadow: none;
+        outline:none;
+    }
+    
+    #tableHead{
+        background-color:rgb(190, 46, 209);
+    }
+    #searchInput{
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        border-bottom: 1px solid #ced4da;
+    }
+    #searchInput:hover,#searchInput:focus{
+        box-shadow: none;
+        outline:none;
+    }
+        </style>
+    
+</head>
+<body>
+    
+<header class="shadow">
+    <div class="header-content d-flex justify-content-center p-2">
+        <img src="logo.jpg" alt="" id="header-logo">
+        <h1 class="text-center text-light">
+Parking Lot Management</h1>
+<div id="header-msg" class="ml-5 align-self-center">
+</div>
+</div>
+</header>
+<div class="form-container mt-5">
+    <form class="w-50 mx-auto" id="entryForm">
+        <h5 class="text-center">
+Add Vehicle to Parking Lot</h5>
+<div class="form-group">
+            <label for="owner">Owner:</label>
+            <input type="text" class="form-control rounded-0 shadow-sm" id="owner" placeholder="Name">
+        </div>
+<div class="form-group">
+            <label for="vehicle">Vehicle:</label>
+            <input type="text" class="form-control rounded-0 shadow-sm" id="vehicle" placeholder="vehicle/model">
+        </div>
+<div class="form-group">
+            <label for="licensePlate">License Plate:</label>
+            <input type="text" class="form-control rounded-0 shadow-sm" id="licensePlate" placeholder="LL-NN-LL-NNNN">
+        </div>
+
+<div class="row">
+          <div class="col-6">
+             <label for="entryDate">Entry Date:</label>
+             <input type="date" class="form-control rounded-0 shadow-sm" id="entryDate">
+          </div>
+
+            <div class="col-6">
+                <label for="entryTime">Entry Time:</label>
+                <input type="time" class="form-control rounded-0 shadow-sm" id="entryTime" min="00:00" max="23:59">
+            </div>
+</div>
+<div class="row">
+    <div class="col-6">
+       <label for="exitDate">Exit Date:</label>
+       <input type="date" class="form-control rounded-0 shadow-sm" id="exitDate">
+    </div>
+    <div class="col-6">
+        <label for="exitTime">Exit Time:</label>
+        <input type="time" class="form-control rounded-0 shadow-sm" id="exitTime"min="00:00" max="23:59">
+    </div>
+</div>
+<button type="submit" class="btn btn-warning mx-auto d-block mt-5 rounded-0 shadow" id="btnOne">Add Vehicle</button>
+    </form>
+</div>
+<div class="table-container mt-5 mb-5 w-75 mx-auto" >
+        <h5 class="text-center mb-3">
+List of Vehicles in Parking Lot</h5>
+<input type="text" class="w-100 mb-3" id="searchInput" placeholder="Search...">
+        <table class="table table-striped shadow " id="parkingTable">
+                <thead class="text-white" id="tableHead">
+<tr>
+                    <th scope="col">Owner</th>
+                    <th scope="col">Vehicle</th>
+                    <th scope="col">License Plate</th>
+                    <th scope="col">Entry Date</th>
+                    <th scope="col">Entry Time</th>
+                    <th scope="col">Exit Date</th>
+                    <th scope="col">Exit Time</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+</thead>
+                <tbody id="tableBody">
+                 
+                </tbody>
+              </table>
+</div>
+<script src="parking lot management.js"></script>
+</body>
+</html>
